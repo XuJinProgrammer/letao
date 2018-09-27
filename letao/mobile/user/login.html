@@ -47,7 +47,7 @@
     $('.btn_login').on('click',function () {
         $.ajax({
         //登陆接口
-            url:'localhost:3000/user/login',
+            url:'/api/user/login',
             type:'post',
             data:{
                 username:$('input[name="name"]').val(),
@@ -55,7 +55,7 @@
             },
             success:function(info){
                 if(info.success){
-                    location.href = './index.html'
+                    location.href = './index.html';
                 }
             }
         })

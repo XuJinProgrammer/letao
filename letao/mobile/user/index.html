@@ -54,5 +54,17 @@
     </footer>
 </div>
 <script src="../res/mui/js/mui.min.js"></script>
+<script src="../res/jquery/jquery.min.js"></script>
+<script>
+    $.ajax({
+        url: '/api/user/queryUserMessage',
+        type:'get',
+        success: function (result) {
+            if(result.error){
+                location.href='./login.html';
+            }
+        }
+    })
+</script>
 </body>
 </html>
